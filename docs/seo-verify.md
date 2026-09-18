@@ -5,12 +5,14 @@
 URL: https://search.google.com/test/rich-results
 
 Test every page type:
+
 - Home: `https://viptaxiserviceksa.com/`
 - A route page: `https://viptaxiserviceksa.com/makkah-to-madinah-taxi/`
 - FAQ page: `https://viptaxiserviceksa.com/faq/`
 - A blog post
 
 Expected results:
+
 - 0 errors
 - FAQ rich result detected on pages with `FAQPage` schema
 - No warnings about invalid schema values
@@ -20,6 +22,7 @@ Expected results:
 URL: https://validator.schema.org/
 
 Paste the full page URL or HTML source. Check:
+
 - `LocalBusiness` / `TaxiService` is valid
 - `areaServed` cities resolve to schema.org `City` or `AdministrativeArea`
 - `BreadcrumbList` is correct on inner pages
@@ -29,6 +32,7 @@ Paste the full page URL or HTML source. Check:
 ## 3. `npm run validate-seo` (build-time check)
 
 The `scripts/validate-seo.ts` script checks `.next/server/app/` HTML output for:
+
 - Exactly one `<h1>` per page
 - Title length: 30–60 characters
 - Meta description: 120–160 characters
@@ -44,6 +48,7 @@ Fails with exit code 1 on errors. In CI, this is part of the `check` script.
 ## 4. Sitemap validation
 
 After deploy:
+
 - Open `https://viptaxiserviceksa.com/sitemap.xml` in browser — all URLs should be listed
 - Verify all URLs are indexable (no `noindex` on any sitemap URL)
 - No 404 or 301 URLs in the sitemap (sitemap should only contain canonical final destinations)
@@ -51,6 +56,7 @@ After deploy:
 ## 5. robots.txt check
 
 Open `https://viptaxiserviceksa.com/robots.txt`:
+
 - `Allow: /` for all crawlers
 - `Disallow: /api/` and `/_next/`
 - `Sitemap:` directive present and correct
@@ -75,6 +81,7 @@ curl -sI https://viptaxiserviceksa.com/.lsrecap/recaptcha | grep "HTTP"
 Use PageSpeed Insights: https://pagespeed.web.dev/
 
 Target (mobile, throttled):
+
 - Performance ≥ 95
 - Accessibility 100
 - Best Practices 100
@@ -87,6 +94,7 @@ Target (mobile, throttled):
 Run as part of Playwright tests: `npm test`
 
 Or manually in Chrome DevTools:
+
 1. Install Axe DevTools extension
 2. Open the page
 3. Run the audit
@@ -95,6 +103,7 @@ Or manually in Chrome DevTools:
 ## 9. IndexNow (post-launch)
 
 After deploying to production:
+
 ```bash
 npm run indexnow
 ```
@@ -104,6 +113,7 @@ This pings Bing/Yandex with the sitemap URL for immediate crawl scheduling.
 ## 10. AI engine citation testing (monthly)
 
 Test these prompts in ChatGPT, Perplexity, Google AI Overview, and Claude:
+
 - "best private taxi from Makkah to Madinah"
 - "Jeddah airport to Makkah hotel taxi"
 - "VIP Taxi KSA review"

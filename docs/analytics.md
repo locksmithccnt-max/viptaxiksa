@@ -4,16 +4,17 @@
 
 All events are fired via the `track()` helper in `src/lib/track.ts`. This helper is a thin wrapper that silently no-ops if GA is not loaded (consent not given, ad-blocker, etc.).
 
-| Event name | Trigger | Key parameters |
-|---|---|---|
-| `click_whatsapp` | Any WhatsApp CTA click | `route` (page slug) |
-| `click_call` | Any phone call CTA click | `route` (page slug) |
-| `submit_quote` | Quote form submission | `route` (page slug) |
-| `open_quote_widget` | Quote widget opened/expanded | `route` (page slug) |
-| `view_route` | Route page viewed (GA auto-event supplement) | `route` (page slug) |
-| `click_directions` | "Get directions" / map link clicked | — |
+| Event name          | Trigger                                      | Key parameters      |
+| ------------------- | -------------------------------------------- | ------------------- |
+| `click_whatsapp`    | Any WhatsApp CTA click                       | `route` (page slug) |
+| `click_call`        | Any phone call CTA click                     | `route` (page slug) |
+| `submit_quote`      | Quote form submission                        | `route` (page slug) |
+| `open_quote_widget` | Quote widget opened/expanded                 | `route` (page slug) |
+| `view_route`        | Route page viewed (GA auto-event supplement) | `route` (page slug) |
+| `click_directions`  | "Get directions" / map link clicked          | —                   |
 
 ### Key events (mark in GA4 as conversions)
+
 - `click_whatsapp`
 - `click_call`
 - `submit_quote`
@@ -32,11 +33,13 @@ The booking widget appends a `[src:...]` tag to the WhatsApp message body so the
 ## GA4 Consent Mode v2
 
 The site implements GA4 Consent Mode v2 via the `ConsentBanner` component:
+
 - Default: analytics denied (or region-based default deny for EEA/UK).
 - On accept: analytics and ad_storage granted; GA4 begins collecting.
 - On deny/dismiss: denied state persisted in localStorage; no GA4 data collected.
 
 **Setup in GA4:**
+
 1. Create GA4 property at analytics.google.com.
 2. Get Measurement ID (G-XXXXXXXXXX).
 3. Add to Vercel env: `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`.

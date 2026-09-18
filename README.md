@@ -23,38 +23,38 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Copy `.env.local.example` to `.env.local`:
 
-| Variable | Required | Description |
-|---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Yes | Full domain, no trailing slash |
-| `NEXT_PUBLIC_GA_ID` | No | GA4 Measurement ID (G-XXXXXXXXXX) |
-| `RESEND_API_KEY` | No | Email lead notifications (WA-only fallback if empty) |
-| `RESEND_TO_EMAIL` | No | Recipient for lead emails |
-| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | No | Cloudflare Turnstile CAPTCHA |
-| `TURNSTILE_SECRET_KEY` | No | Cloudflare Turnstile secret |
-| `INDEXNOW_KEY` | No | IndexNow key for Bing/Yandex ping |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | No | Google Search Console meta verification value |
-| `NEXT_PUBLIC_BING_VERIFICATION` | No | Bing Webmaster Tools meta verification value |
+| Variable                         | Required | Description                                          |
+| -------------------------------- | -------- | ---------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`           | Yes      | Full domain, no trailing slash                       |
+| `NEXT_PUBLIC_GA_ID`              | No       | GA4 Measurement ID (G-XXXXXXXXXX)                    |
+| `RESEND_API_KEY`                 | No       | Email lead notifications (WA-only fallback if empty) |
+| `RESEND_TO_EMAIL`                | No       | Recipient for lead emails                            |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | No       | Cloudflare Turnstile CAPTCHA                         |
+| `TURNSTILE_SECRET_KEY`           | No       | Cloudflare Turnstile secret                          |
+| `INDEXNOW_KEY`                   | No       | IndexNow key for Bing/Yandex ping                    |
+| `NEXT_PUBLIC_GSC_VERIFICATION`   | No       | Google Search Console meta verification value        |
+| `NEXT_PUBLIC_BING_VERIFICATION`  | No       | Bing Webmaster Tools meta verification value         |
 
 ---
 
 ## npm scripts
 
-| Script | What it does |
-|---|---|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run start` | Start production server |
-| `npm run check` | Full quality gate (typecheck + lint + format + build) |
-| `npm run typecheck` | TypeScript strict check |
-| `npm run lint` | ESLint flat config |
-| `npm run format` | Prettier write (fix formatting) |
-| `npm run format:check` | Prettier check (CI) |
-| `npm run validate-seo` | SEO/schema validation script |
-| `npm run indexnow` | Ping IndexNow (run after deploy) |
-| `npm test` | Playwright smoke + a11y tests |
+| Script                 | What it does                                          |
+| ---------------------- | ----------------------------------------------------- |
+| `npm run dev`          | Start dev server                                      |
+| `npm run build`        | Production build                                      |
+| `npm run start`        | Start production server                               |
+| `npm run check`        | Full quality gate (typecheck + lint + format + build) |
+| `npm run typecheck`    | TypeScript strict check                               |
+| `npm run lint`         | ESLint flat config                                    |
+| `npm run format`       | Prettier write (fix formatting)                       |
+| `npm run format:check` | Prettier check (CI)                                   |
+| `npm run validate-seo` | SEO/schema validation script                          |
+| `npm run indexnow`     | Ping IndexNow (run after deploy)                      |
+| `npm test`             | Playwright smoke + a11y tests                         |
 
 **Quality gate before every commit:** `npm run check`
-**Strict mode (fails on TODO_ placeholders):** `STRICT=1 npm run build`
+**Strict mode (fails on TODO\_ placeholders):** `STRICT=1 npm run build`
 
 ---
 
@@ -95,7 +95,7 @@ Copy `.env.local.example` to `.env.local`:
    updatedAt: '2026-09-18'
    author: 'VIP Taxi Service KSA'
    ---
-   
+
    Your content here...
    ```
 2. Add the slug to `src/app/sitemap.ts`.
@@ -126,13 +126,13 @@ See `OFFSITE_CHECKLIST.md` for GBP, citations, and review generation.
 
 ## Project phases
 
-| Phase | Status |
-|---|---|
-| 0 — Recon & Plan | ✅ Done |
-| 1 — Foundation | ✅ Done |
+| Phase                          | Status  |
+| ------------------------------ | ------- |
+| 0 — Recon & Plan               | ✅ Done |
+| 1 — Foundation                 | ✅ Done |
 | 2 — Design system & components | ⏳ Next |
-| 3 — Data & pages | Pending |
-| 4 — SEO layer | Pending |
-| 5 — Conversion & analytics | Pending |
-| 6 — Content | Pending |
-| 7 — QA & hardening | Pending |
+| 3 — Data & pages               | Pending |
+| 4 — SEO layer                  | Pending |
+| 5 — Conversion & analytics     | Pending |
+| 6 — Content                    | Pending |
+| 7 — QA & hardening             | Pending |
