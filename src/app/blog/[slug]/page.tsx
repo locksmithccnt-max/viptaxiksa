@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getBlogPostBySlug, BLOG_SLUGS, BLOG_POSTS } from '@/data/blog'
+import { getBlogContent } from '@/data/blog-content'
 import { site } from '@/config/site'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { CTASection } from '@/components/sections/CTASection'
@@ -23,14 +24,16 @@ export async function generateMetadata({
   const post = getBlogPostBySlug(slug)
   if (!post) return {}
 
-  const title = `${post.title} | ${site.name}`
+  // Use post.title alone — root layout template appends "| VIP Taxi KSA"
+  const desc =
+    post.description.length > 155 ? post.description.slice(0, 152) + '...' : post.description
   return {
-    title,
-    description: post.description,
+    title: post.title,
+    description: desc,
     alternates: { canonical: `${site.url}/blog/${slug}/` },
     openGraph: {
-      title,
-      description: post.description,
+      title: post.title,
+      description: desc,
       url: `${site.url}/blog/${slug}/`,
       type: 'article',
       publishedTime: post.publishedAt,
@@ -69,6 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
 
   const related = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3)
+  const content = getBlogContent(slug)
 
   return (
     <>
@@ -113,18 +117,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
         </header>
 
-        {/* Article body — Phase 6 replaces this placeholder with full MDX content */}
         <article
-          className="space-y-6 text-sm leading-relaxed"
+          className="blog-prose space-y-6 text-sm leading-relaxed"
           style={{ color: 'var(--color-muted)' }}
         >
-          <p>
-            Full article content coming soon. In the meantime,{' '}
-            <Link href="/contact/" style={{ color: 'var(--color-gold)' }} className="underline">
-              contact us on WhatsApp
-            </Link>{' '}
-            for personalised travel advice.
-          </p>
+          {content ?? (
+            <p>
+              Full article content coming soon. In the meantime,{' '}
+              <Link href="/contact/" style={{ color: 'var(--color-gold)' }} className="underline">
+                contact us on WhatsApp
+              </Link>{' '}
+              for personalised travel advice.
+            </p>
+          )}
         </article>
 
         <div className="mt-12 space-y-8">

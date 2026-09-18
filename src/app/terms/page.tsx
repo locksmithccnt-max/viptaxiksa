@@ -4,7 +4,7 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: `Terms & Conditions | ${site.name}`,
-  description: `Terms and conditions for private transfer bookings with VIP Taxi Service KSA.`,
+  description: `Terms and conditions for private transfer bookings with VIP Taxi Service KSA. Covers booking, pricing, cancellations, luggage, and passenger responsibilities.`,
   alternates: { canonical: `${site.url}/terms/` },
 }
 

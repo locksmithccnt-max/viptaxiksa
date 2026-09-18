@@ -30,19 +30,19 @@ export async function generateMetadata({
   const route = getRouteBySlug(slug)
   if (!route) return {}
 
-  const title = `${route.title} | ${site.name}`
-  const description =
-    route.metaDescription ??
-    `${route.description} Book instantly on WhatsApp — no hidden fees, 4.8★ Google rating.`
+  // Use route.title alone — root layout template appends "| VIP Taxi KSA"
+  const rawDesc =
+    route.metaDescription ?? `${route.description} Book on WhatsApp — no hidden fees, 4.8★ Google.`
+  const description = rawDesc.length > 155 ? rawDesc.slice(0, 152) + '...' : rawDesc
 
   return {
-    title,
+    title: route.title,
     description,
     alternates: {
       canonical: `${site.url}/${slug}/`,
     },
     openGraph: {
-      title,
+      title: route.title,
       description,
       url: `${site.url}/${slug}/`,
       type: 'website',

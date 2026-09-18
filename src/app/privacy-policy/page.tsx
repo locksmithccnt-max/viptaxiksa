@@ -4,7 +4,7 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: `Privacy Policy | ${site.name}`,
-  description: `Privacy policy for viptaxiserviceksa.com — how we collect, use, and protect your data.`,
+  description: `Privacy policy for VIP Taxi Service KSA — how we collect, use, and protect your personal data. Covers Google Analytics, cookies, and your rights.`,
   alternates: { canonical: `${site.url}/privacy-policy/` },
 }
 
