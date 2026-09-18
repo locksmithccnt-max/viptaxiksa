@@ -1,0 +1,11 @@
+source,destination,status,notes
+/about/,/about-us/,301,Already indexed — redirect to canonical
+/about,/about-us/,301,Non-trailing-slash variant
+/.lsrecap/recaptcha,/api/gone/,410,LiteSpeed plugin junk path
+/wp-admin,/api/gone/,410,WordPress admin
+/wp-admin/,/api/gone/,410,WordPress admin (trailing slash)
+/wp-login.php,/api/gone/,410,WordPress login
+/xmlrpc.php,/api/gone/,410,WordPress XML-RPC
+/wp-json/,/api/gone/,410,WordPress REST API
+/wp-content/,/api/gone/,410,WordPress content directory
+/wp-includes/,/api/gone/,410,WordPress includes directory

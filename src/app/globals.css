@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+
+/* ── Design tokens ────────────────────────────────────────────────────────── */
+@theme {
+  /* Brand palette */
+  --color-bg: #050505;
+  --color-surface: #0d0d0d;
+  --color-surface-2: #151515;
+  --color-border: #262626;
+  --color-text: #f5f5f4;
+  --color-muted: #a8a29e;
+  --color-gold: #c9a24b;
+  --color-gold-hi: #e0bb62;
+  --color-wa: #25d366;
+  --color-danger: #ef4444;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-sm: 8px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+}
+
+/* Font families are injected as CSS vars by next/font — reference them inline */
+@theme inline {
+  --font-display: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-manrope), system-ui, -apple-system, sans-serif;
+}
+
+/* ── Global base ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: clamp(16px, 1.1vw + 14px, 18px);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-bg);
+  }
+
+  /* Focus ring — gold, accessible */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+    background: var(--color-gold);
+    color: #000;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: top var(--transition-fast);
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4.5vw + 1rem, 3.5rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
+  }
+
+  /* Links */
+  a {
+    color: inherit;
+    text-decoration-color: var(--color-gold);
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+  }
+  a:hover {
+    color: var(--color-gold-hi);
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    text-align: left;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface-2);
+    border-bottom: 1px solid var(--color-border);
+  }
+  td {
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Details / Summary (FAQ) */
+  details > summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* ── Utility layer ────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Gold gradient text for hero/display */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hi) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Thin gold top border for cards */
+  .border-top-gold {
+    border-top: 1px solid var(--color-gold);
+  }
+
+  /* Gold glow for primary CTAs */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(201, 162, 75, 0.25);
+  }
+  .glow-gold:hover {
+    box-shadow: 0 0 30px rgba(201, 162, 75, 0.4);
+  }
+}
