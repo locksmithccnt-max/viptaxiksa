@@ -1,57 +1,197 @@
 import type { Metadata } from 'next'
 import { site } from '@/config/site'
+import { ROUTES } from '@/data/routes'
+import { REVIEWS } from '@/data/reviews'
+import { Hero } from '@/components/sections/Hero'
+import { AnswerBox } from '@/components/sections/AnswerBox'
+import { RouteCard } from '@/components/sections/RouteCard'
+import { ReviewCarousel } from '@/components/sections/ReviewCarousel'
+import { StepList } from '@/components/sections/StepList'
+import { CTASection } from '@/components/sections/CTASection'
+import { QuoteWidget } from '@/components/booking/QuoteWidget'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'VIP Taxi Service KSA – Private Makkah, Madinah & Jeddah Transfers',
+  title: 'VIP Taxi Service KSA — Private Makkah, Madinah & Jeddah Transfers',
   description:
-    'Private taxi and limousine transfers between Makkah, Madinah and Jeddah for Umrah and Hajj pilgrims, families, and tourists. Hotel-to-hotel, 24/7. Book via WhatsApp.',
+    'Private taxi and limousine transfers between Makkah, Madinah and Jeddah for Umrah and Hajj pilgrims, families, and tourists. Hotel-to-hotel, no hidden fees, 4.8★ Google.',
   alternates: { canonical: `${site.url}/` },
+  openGraph: {
+    title: 'VIP Taxi Service KSA — Private Makkah, Madinah & Jeddah Transfers',
+    description:
+      'Door-to-door private transfers for Umrah & Hajj pilgrims. Book instantly on WhatsApp.',
+    url: `${site.url}/`,
+    type: 'website',
+  },
 }
 
-/** Home page — Phase 2/3 will replace this stub with full sections. */
+const homeJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'TaxiService',
+      '@id': `${site.url}/#business`,
+      name: site.name,
+      url: site.url,
+      telephone: site.phone,
+      description:
+        'Private taxi and limousine transfers between Makkah, Madinah and Jeddah. Specialising in Umrah and Hajj airport transfers, intercity routes, and Ziyarah tours.',
+      areaServed: [
+        { '@type': 'City', name: 'Makkah' },
+        { '@type': 'City', name: 'Madinah' },
+        { '@type': 'City', name: 'Jeddah' },
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'SA',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: site.rating.value,
+        reviewCount: site.rating.count,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      priceRange: 'Contact for quote',
+    },
+  ],
+}
+
+const featuredRoutes = ROUTES.filter((r) =>
+  [
+    'jeddah-airport-to-makkah-taxi',
+    'makkah-to-madinah-taxi',
+    'madinah-to-makkah-taxi',
+    'makkah-to-jeddah-airport-taxi',
+    'makkah-ziyarah-tour',
+    'madinah-ziyarah-tour',
+  ].includes(r.slug),
+)
+
 export default function HomePage() {
   return (
-    <main id="main-content">
-      <section
-        className="flex min-h-screen flex-col items-center justify-center px-6 text-center"
-        style={{ background: 'var(--color-bg)' }}
+    <>
+      <JsonLd data={homeJsonLd} />
+
+      <Hero
+        h1="Private Taxi Transfers Between Makkah, Madinah & Jeddah"
+        subheading={`Door-to-door service for Umrah and Hajj pilgrims, families, and tourists. Hotel-to-hotel, no hidden fees, ${site.rating.value}★ on ${site.rating.source}.`}
       >
-        <h1
-          className="font-display text-4xl font-semibold md:text-6xl"
-          style={{ color: 'var(--color-text)' }}
-        >
-          VIP Taxi Service KSA
-        </h1>
-        <p className="mt-4 max-w-xl text-lg" style={{ color: 'var(--color-muted)' }}>
-          Private transfers between Makkah, Madinah and Jeddah — for Umrah &amp; Hajj pilgrims,
-          families, and tourists. Hotel-to-hotel service.
-        </p>
-        <p className="mt-3 text-sm" style={{ color: 'var(--color-muted)', opacity: 0.6 }}>
-          ★ {site.rating.value} on {site.rating.source} · {site.rating.count} reviews
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href={site.whatsapp}
-            className="rounded-lg px-8 py-4 font-semibold text-black transition-all"
-            style={{ background: 'var(--color-wa)' }}
-            target="_blank"
-            rel="noopener noreferrer"
+        <QuoteWidget />
+      </Hero>
+
+      <div className="mx-auto max-w-5xl space-y-16 px-4 py-16 sm:px-6 lg:px-8">
+        <AnswerBox>
+          VIP Taxi Service KSA provides private car transfers between Makkah, Madinah, and Jeddah
+          Airport — including airport pick-up and drop-off, intercity journeys, and Ziyarah tours.
+          All bookings are confirmed in writing via WhatsApp. Price per vehicle, not per person.
+        </AnswerBox>
+
+        {/* Routes grid */}
+        <section aria-labelledby="routes-heading">
+          <h2
+            id="routes-heading"
+            className="font-display mb-6 text-2xl font-semibold"
+            style={{ color: 'var(--color-text)' }}
           >
-            Book on WhatsApp
-          </a>
-          <a
-            href={site.phoneHref}
-            className="rounded-lg px-8 py-4 font-semibold transition-all"
-            style={{
-              background: 'var(--color-surface-2)',
-              border: '1px solid var(--color-border)',
-              color: 'var(--color-text)',
-            }}
+            Popular transfer routes
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredRoutes.map((route) => (
+              <RouteCard
+                key={route.slug}
+                slug={route.slug}
+                title={route.title}
+                fromCity={route.fromCity}
+                toCity={route.toCity}
+                approxDurationMin={route.durationMin}
+                description={route.description}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* How it works */}
+        <StepList
+          heading="How it works"
+          steps={[
+            {
+              title: 'Message us on WhatsApp',
+              description:
+                'Tell us your route, travel date, pickup time, passenger count, and luggage. We respond quickly — no contact forms, no waiting.',
+            },
+            {
+              title: 'Receive written confirmation',
+              description:
+                'We confirm your vehicle class, pickup details, and price in writing. No surprises, no meter, no last-minute substitutions.',
+            },
+            {
+              title: 'Meet your driver at your hotel',
+              description:
+                'Your driver arrives at the lobby at the agreed time. Airport arrivals include meet-and-greet in the arrivals hall.',
+            },
+          ]}
+        />
+
+        {/* Trust badges */}
+        <section aria-label="Trust signals">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                icon: '★',
+                title: `${site.rating.value} on ${site.rating.source}`,
+                body: `${site.rating.count}+ verified passenger reviews.`,
+              },
+              {
+                icon: '✓',
+                title: 'Written confirmation',
+                body: 'Vehicle class and price confirmed on WhatsApp before every trip.',
+              },
+              {
+                icon: '⊞',
+                title: 'Price per vehicle',
+                body: 'Same price for 1 or 6 passengers — no per-seat charges.',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl p-5"
+                style={{
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                }}
+              >
+                <div className="mb-2 text-2xl" style={{ color: 'var(--color-gold)' }} aria-hidden>
+                  {item.icon}
+                </div>
+                <h3
+                  className="font-display mb-1 font-semibold"
+                  style={{ color: 'var(--color-text)' }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-sm" style={{ color: 'var(--color-muted)' }}>
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section aria-labelledby="reviews-home-heading">
+          <h2
+            id="reviews-home-heading"
+            className="font-display mb-6 text-2xl font-semibold"
+            style={{ color: 'var(--color-text)' }}
           >
-            {site.phonePretty}
-          </a>
-        </div>
-      </section>
-    </main>
+            What passengers say
+          </h2>
+          <ReviewCarousel reviews={REVIEWS} />
+        </section>
+
+        <CTASection />
+      </div>
+    </>
   )
 }

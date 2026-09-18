@@ -1,33 +1,40 @@
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
 export interface RouteData {
   slug: string
   title: string
   h1: string
-  metaDescription: string
-  /** 40–60 word direct answer for answer-box / AI extraction */
-  answerBox: string
+  /** Meta description 140–160 chars */
+  metaDescription?: string
+  /** 40–60 word direct answer for AnswerBox / AI extraction */
+  answerBoxText: string
+  description: string
   fromCity: string
   toCity: string
-  /** Approximate distance range in km, marked as approximate */
-  approxDistanceKm: [number, number]
-  /** Approximate drive time range in minutes, marked as approximate */
-  approxDurationMin: [number, number]
-  reverseSlug: string
+  /** km — 0 for tours that start and end in same city */
+  distanceKm: number
+  /** Drive time range in minutes */
+  durationMin: [number, number]
+  highlights: string[]
+  faqs: FaqItem[]
   relatedSlugs: string[]
-  enabled: boolean
-  updatedAt: string // ISO date string
-  faq: Array<{ question: string; answer: string }>
+  updatedAt: string
 }
 
 export interface ServiceData {
   slug: string
   title: string
   h1: string
-  metaDescription: string
-  answerBox: string
+  metaDescription?: string
+  answerBoxText: string
+  description: string
   serviceType: string
-  enabled: boolean
+  highlights: string[]
+  faqs: FaqItem[]
   updatedAt: string
-  faq: Array<{ question: string; answer: string }>
 }
 
 export type PageData = RouteData | ServiceData

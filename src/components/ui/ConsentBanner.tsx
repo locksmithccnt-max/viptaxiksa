@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { site } from '@/config/site'
 
 type ConsentState = 'granted' | 'denied' | null
@@ -70,9 +71,9 @@ export function ConsentBanner() {
       <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
         We use Google Analytics to understand how visitors use this site. No personal data is shared
         with third parties.{' '}
-        <a href="/privacy-policy/" className="underline" style={{ color: 'var(--color-gold)' }}>
+        <Link href="/privacy-policy/" className="underline" style={{ color: 'var(--color-gold)' }}>
           Privacy policy
-        </a>
+        </Link>
       </p>
       <div className="mt-4 flex gap-3">
         <button

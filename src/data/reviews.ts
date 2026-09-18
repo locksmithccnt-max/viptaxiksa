@@ -1,0 +1,60 @@
+import type { Review } from '@/types/review'
+
+export const REVIEWS: Review[] = [
+  {
+    id: '1',
+    author: 'Nurul Hidayah Shuhaimi',
+    rating: 5,
+    text: 'Very punctual! The driver was waiting at the hotel lobby and kept in constant contact before pickup. Highly recommend for Makkah to Jeddah Airport transfers.',
+    routeHint: 'Makkah → Jeddah Airport',
+    source: 'google',
+  },
+  {
+    id: '2',
+    author: 'Imran Hassan',
+    rating: 5,
+    text: 'Excellent service from start to finish. Clean vehicle, professional driver, and arrived right on time at KAIA arrivals. Will use again for our next Umrah trip.',
+    routeHint: 'Jeddah Airport → Makkah',
+    source: 'google',
+  },
+  {
+    id: '3',
+    author: 'Fatimah Al-Rashidi',
+    rating: 5,
+    text: 'We booked a minivan for 6 people and 7 bags — everything fit perfectly. The driver helped load all the luggage without complaint. Stress-free Makkah to Madinah journey.',
+    routeHint: 'Makkah → Madinah',
+    source: 'google',
+  },
+  {
+    id: '4',
+    author: 'Mohammed Tariq',
+    rating: 5,
+    text: 'I have used many taxi services in Saudi Arabia and VIP Taxi KSA stands out. No negotiation, no surprises — the price quoted is the price paid. Booked everything on WhatsApp in minutes.',
+    routeHint: 'Madinah → Makkah',
+    source: 'google',
+  },
+  {
+    id: '5',
+    author: 'Aisha Bint Sulayman',
+    rating: 5,
+    text: 'We were a group of 10 pilgrims and they arranged a minibus right on time. The driver was kind and patient, even when we stopped at Jabal Al-Noor. Highly recommended for Hajj groups.',
+    routeHint: 'Umrah / Hajj Airport Transfer',
+    source: 'google',
+  },
+  {
+    id: '6',
+    author: 'Yusuf Patel',
+    rating: 5,
+    text: 'Really appreciated the Makkah Ziyarah tour. The driver knew all the sites, waited patiently, and made the whole experience spiritually uplifting. Booked again for next year.',
+    routeHint: 'Makkah Ziyarah Tour',
+    source: 'google',
+  },
+  {
+    id: '7',
+    author: 'Khadijah Osman',
+    rating: 5,
+    text: 'Communication was excellent throughout. They confirmed the vehicle in writing before the trip — a saloon as agreed, not a different car on the day. That level of trust matters a lot.',
+    routeHint: 'Makkah → Jeddah Airport',
+    source: 'google',
+  },
+]
