@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(site.url || 'https://viptaxiserviceksa.com'),
   title: {
     default: 'VIP Taxi Service KSA — Private Makkah, Madinah & Jeddah Transfers',
     template: '%s | VIP Taxi KSA',

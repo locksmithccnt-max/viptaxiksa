@@ -8,7 +8,7 @@ export const site = {
   // ── Brand ────────────────────────────────────────────────────────────────
   name: 'VIP Taxi Service KSA',
   gbpName: 'VIP TAXI KSA',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://viptaxiserviceksa.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://viptaxiserviceksa.com',
   tagline: 'Private taxi transfers between Makkah, Madinah and Jeddah',
 
   // ── Contact ───────────────────────────────────────────────────────────────
