@@ -89,7 +89,7 @@ export const site = {
   ga4Id: process.env.NEXT_PUBLIC_GA_ID ?? '',
 
   // ── Verification ──────────────────────────────────────────────────────────
-  gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? 'uex9F0L8UcdUIbiVxqil1wDsRN6N5cvErdgggiOIWHo',
+  gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || 'uex9F0L8UcdUIbiVxqil1wDsRN6N5cvErdgggiOIWHo',
   bingVerification: process.env.NEXT_PUBLIC_BING_VERIFICATION ?? '',
 
   // ── AI crawler policy ────────────────────────────────────────────────────

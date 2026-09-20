@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     canonical: site.url + '/',
   },
   verification: {
-    google: site.gscVerification || undefined,
+    google: site.gscVerification,
     other: site.bingVerification ? { 'msvalidate.01': site.bingVerification } : {},
   },
   manifest: '/manifest.webmanifest',
