@@ -51,10 +51,31 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
+    // Produce both slash variants so trailingSlash config doesn't matter
+    const r301 = (src: string, dst: string) => [
+      { source: src, destination: dst, permanent: true },
+      { source: `${src}/`, destination: dst, permanent: true },
+    ]
     return [
-      // Preserve existing indexed URLs
-      { source: '/about', destination: '/about-us/', permanent: true },
-      { source: '/about/', destination: '/about-us/', permanent: true },
+      // ── Preserve already-indexed URLs ──────────────────────────────────────
+      ...r301('/about', '/about-us/'),
+
+      // ── Old WordPress slugs → new site (preserves GSC ranking equity) ──────
+      ...r301('/contact-us', '/contact/'),
+      ...r301('/makkah-to-jeddah-taxi', '/makkah-to-jeddah-airport-taxi/'),
+      ...r301('/jeddah-to-makkah-taxi-service', '/jeddah-airport-to-makkah-taxi/'),
+      ...r301('/jeddah-to-makkah-taxi-2', '/jeddah-airport-to-makkah-taxi/'),
+      ...r301('/makkah-ziyarat-taxi', '/makkah-ziyarah-tour/'),
+      ...r301('/madinah-ziyarat-taxi', '/madinah-ziyarah-tour/'),
+      ...r301('/comfortable-ziyarah-tours-makkah-madinah', '/makkah-ziyarah-tour/'),
+      ...r301('/madinah-city-taxi-ziyarah-tours', '/madinah-ziyarah-tour/'),
+      ...r301('/vip-ziyarah-taxi-service', '/makkah-ziyarah-tour/'),
+      ...r301('/airport-transfers-umrah-hajj-pilgrims-saudi-arabia', '/airport-transfers-umrah-hajj/'),
+      ...r301('/airport-transfers-for-umrah-hajj-pilgrims', '/airport-transfers-umrah-hajj/'),
+      ...r301('/umrah-hajj-taxi-services-in-jeddah', '/airport-transfers-umrah-hajj/'),
+      ...r301('/transportation-services', '/'),
+      ...r301('/service', '/'),
+      ...r301('/congratulations', '/'),
     ]
   },
 
@@ -69,6 +90,7 @@ const nextConfig: NextConfig = {
       { source: '/wp-json/:path*', destination: '/api/gone/' },
       { source: '/wp-content/:path*', destination: '/api/gone/' },
       { source: '/wp-includes/:path*', destination: '/api/gone/' },
+      { source: '/author/:path*', destination: '/api/gone/' },
     ]
   },
 }

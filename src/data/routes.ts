@@ -3,8 +3,10 @@ import type { RouteData } from '@/types/route'
 export const ROUTES: RouteData[] = [
   {
     slug: 'jeddah-airport-to-makkah-taxi',
-    title: 'Jeddah Airport to Makkah Taxi',
+    title: 'Jeddah Airport to Makkah — Private Taxi',
     h1: 'Private Taxi from Jeddah Airport to Makkah',
+    metaDescription:
+      'Private taxi from Jeddah Airport (KAIA) to Makkah — 80 km, 60–90 min. Driver meets you in arrivals, door-to-door to your hotel. 24/7 airport transfers. Book on WhatsApp.',
     fromCity: 'Jeddah Airport (KAIA)',
     toCity: 'Makkah',
     distanceKm: 80,
@@ -45,8 +47,9 @@ export const ROUTES: RouteData[] = [
       'makkah-to-jeddah-airport-taxi',
       'makkah-to-madinah-taxi',
       'airport-transfers-umrah-hajj',
+      'riyadh-airport-to-makkah-taxi',
     ],
-    updatedAt: '2026-09-18',
+    updatedAt: '2026-09-20',
   },
   {
     slug: 'makkah-to-jeddah-airport-taxi',
@@ -92,8 +95,10 @@ export const ROUTES: RouteData[] = [
   },
   {
     slug: 'makkah-to-madinah-taxi',
-    title: 'Makkah to Madinah Taxi',
+    title: 'Makkah to Madinah — Private Taxi Service',
     h1: 'Private Taxi from Makkah to Madinah',
+    metaDescription:
+      'Private taxi from Makkah to Madinah — 430 km, 4–5 hours door-to-door. Stop at Ziyarah sites en route on request. No hidden fees, 4.8★ Google. Book on WhatsApp.',
     fromCity: 'Makkah',
     toCity: 'Madinah',
     distanceKm: 430,
@@ -304,8 +309,10 @@ export const ROUTES: RouteData[] = [
   },
   {
     slug: 'airport-transfers-umrah-hajj',
-    title: 'Umrah & Hajj Airport Transfers',
+    title: 'Umrah & Hajj Private Airport Transfers',
     h1: 'Airport Transfers for Umrah & Hajj Pilgrims',
+    metaDescription:
+      'Private airport transfers for Umrah & Hajj pilgrims — Jeddah (KAIA) and Madinah airports direct to your hotel. 24/7, no hidden fees, 4.8★ Google. Book on WhatsApp.',
     fromCity: 'Jeddah Airport',
     toCity: 'Makkah / Madinah',
     distanceKm: 0,
@@ -381,6 +388,56 @@ export const ROUTES: RouteData[] = [
     ],
     relatedSlugs: ['makkah-ziyarah-tour', 'madinah-ziyarah-tour', 'makkah-to-madinah-taxi'],
     updatedAt: '2026-09-18',
+  },
+  {
+    slug: 'riyadh-airport-to-makkah-taxi',
+    title: 'Riyadh Airport to Makkah Taxi',
+    h1: 'Private Taxi from Riyadh Airport to Makkah',
+    metaDescription:
+      'Private taxi from Riyadh Airport (KKIA) to Makkah — approx. 980 km, 9–10 hours door-to-door. No connection flights, no luggage transfers. Book on WhatsApp.',
+    fromCity: 'Riyadh (KKIA)',
+    toCity: 'Makkah',
+    distanceKm: 980,
+    durationMin: [540, 600],
+    description:
+      'Long-distance private transfer from King Khalid International Airport (Riyadh) directly to your Makkah hotel — no domestic connections, no extra luggage handling at transit airports.',
+    answerBoxText:
+      'A private taxi from Riyadh Airport (KKIA) to Makkah covers approximately 980 km via Highway 40 and takes 9–10 hours door-to-door. VIP Taxi Service KSA provides direct transfers — no connection flights, no luggage reclaim at Jeddah.',
+    highlights: [
+      'Direct from KKIA arrivals hall to your Makkah hotel — no connections',
+      'Driver meets you in arrivals with a name board',
+      'Rest stops at highway service stations included',
+      'Minivan and minibus available for families with heavy luggage',
+      'Pickup from Riyadh hotels also available',
+    ],
+    faqs: [
+      {
+        question: 'How long does the drive from Riyadh Airport to Makkah take?',
+        answer:
+          'The drive is approximately 980 km via Highway 40 and takes 9–10 hours depending on traffic and rest stops. We include one short rest break at a highway service station.',
+      },
+      {
+        question: 'Is it better to fly Riyadh–Jeddah and then taxi to Makkah?',
+        answer:
+          'Connecting Riyadh to Jeddah by flight (1 hour) then taking an 80 km taxi is faster overall. However, a direct Riyadh–Makkah transfer is better for large groups or heavy luggage — no domestic terminal queues, no extra baggage handling.',
+      },
+      {
+        question: 'Do you stop on the way from Riyadh to Makkah?',
+        answer:
+          'Yes. One or two short rest stops at highway service stations are included. For families with children, additional stops can be arranged.',
+      },
+      {
+        question: 'Can you pick me up from a Riyadh hotel, not the airport?',
+        answer:
+          'Yes. We can pick up from any Riyadh hotel or address and deliver door-to-door to your Makkah hotel.',
+      },
+    ],
+    relatedSlugs: [
+      'jeddah-airport-to-makkah-taxi',
+      'airport-transfers-umrah-hajj',
+      'makkah-ziyarah-tour',
+    ],
+    updatedAt: '2026-09-20',
   },
 ]
 
