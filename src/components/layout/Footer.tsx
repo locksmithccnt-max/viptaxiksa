@@ -142,18 +142,30 @@ export function Footer() {
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <nav aria-label="Legal" className="flex gap-4">
-            {legalLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="transition-colors hover:text-[--color-gold]"
-                style={{ color: 'var(--color-muted)' }}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex flex-wrap items-center gap-4">
+            <nav aria-label="Legal" className="flex gap-4">
+              {legalLinks.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="transition-colors hover:text-[--color-gold]"
+                  style={{ color: 'var(--color-muted)' }}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+            <span style={{ color: 'var(--color-border)' }}>|</span>
+            <a
+              href="https://razacheena.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-[--color-gold]"
+              style={{ color: 'var(--color-muted)' }}
+            >
+              Managed by razacheena.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>
