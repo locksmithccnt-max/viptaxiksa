@@ -32,7 +32,8 @@ export async function generateMetadata({
 
   // Use route.title alone — root layout template appends "| VIP Taxi KSA"
   const rawDesc =
-    route.metaDescription ?? `${route.description} Book on WhatsApp — no hidden fees, 4.8★ Google.`
+    route.metaDescription ??
+      `${route.description} WhatsApp: ${site.phonePretty} — no hidden fees, 4.8★ Google.`
   const description = rawDesc.length > 155 ? rawDesc.slice(0, 152) + '...' : rawDesc
 
   return {

@@ -6,7 +6,7 @@ export const ROUTES: RouteData[] = [
     title: 'Jeddah Airport to Makkah — Private Taxi',
     h1: 'Private Taxi from Jeddah Airport to Makkah',
     metaDescription:
-      'Private taxi from Jeddah Airport (KAIA) to Makkah — 80 km, 60–90 min. Driver meets you in arrivals, door-to-door to your hotel. 24/7 airport transfers. Book on WhatsApp.',
+      'Jeddah Airport to Makkah private taxi — 80 km, 60–90 min. Meet-and-greet in arrivals, door-to-door. 24/7. WhatsApp: +966 53 972 0003.',
     fromCity: 'Jeddah Airport (KAIA)',
     toCity: 'Makkah',
     distanceKm: 80,
@@ -98,7 +98,7 @@ export const ROUTES: RouteData[] = [
     title: 'Makkah to Madinah — Private Taxi Service',
     h1: 'Private Taxi from Makkah to Madinah',
     metaDescription:
-      'Private taxi from Makkah to Madinah — 430 km, 4–5 hours door-to-door. Stop at Ziyarah sites en route on request. No hidden fees, 4.8★ Google. Book on WhatsApp.',
+      'Makkah to Madinah private taxi — 430 km, 4–5 hrs door-to-door. Ziyarah stops on request. No hidden fees. WhatsApp: +966 53 972 0003.',
     fromCity: 'Makkah',
     toCity: 'Madinah',
     distanceKm: 430,
@@ -312,7 +312,7 @@ export const ROUTES: RouteData[] = [
     title: 'Umrah & Hajj Private Airport Transfers',
     h1: 'Airport Transfers for Umrah & Hajj Pilgrims',
     metaDescription:
-      'Private airport transfers for Umrah & Hajj pilgrims — Jeddah (KAIA) and Madinah airports direct to your hotel. 24/7, no hidden fees, 4.8★ Google. Book on WhatsApp.',
+      'Umrah & Hajj airport transfers — Jeddah (KAIA) & Madinah airports to your hotel. 24/7 private vehicles. WhatsApp: +966 53 972 0003.',
     fromCity: 'Jeddah Airport',
     toCity: 'Makkah / Madinah',
     distanceKm: 0,
@@ -394,7 +394,7 @@ export const ROUTES: RouteData[] = [
     title: 'Riyadh Airport to Makkah Taxi',
     h1: 'Private Taxi from Riyadh Airport to Makkah',
     metaDescription:
-      'Private taxi from Riyadh Airport (KKIA) to Makkah — approx. 980 km, 9–10 hours door-to-door. No connection flights, no luggage transfers. Book on WhatsApp.',
+      'Riyadh Airport to Makkah private taxi — 980 km, 9–10 hrs door-to-door. No connections, no luggage transfers. WhatsApp: +966 53 972 0003.',
     fromCity: 'Riyadh (KKIA)',
     toCity: 'Makkah',
     distanceKm: 980,

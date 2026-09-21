@@ -14,7 +14,7 @@ import { JsonLd } from '@/components/seo/JsonLd'
 export const metadata: Metadata = {
   title: 'VIP Taxi Service KSA — Private Makkah, Madinah & Jeddah Transfers',
   description:
-    'Private taxi transfers between Makkah, Madinah & Jeddah for Umrah and Hajj pilgrims. Hotel-to-hotel, no hidden fees, 4.8★ Google. Book instantly on WhatsApp.',
+    'Private taxi transfers, Makkah · Madinah · Jeddah. Umrah & Hajj airport transfers, Ziyarah tours, intercity routes. 4.8★ Google. WhatsApp: +966 53 972 0003.',
   alternates: { canonical: `${site.url}/` },
   openGraph: {
     title: 'VIP Taxi Service KSA — Private Makkah, Madinah & Jeddah Transfers',
