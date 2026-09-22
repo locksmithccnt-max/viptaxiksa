@@ -59,7 +59,7 @@ export default function NotFound() {
 
       <div className="mt-10 flex gap-4">
         <a
-          href="tel:+966539720003"
+          href="tel:+966573067785"
           className="rounded-lg px-6 py-3 font-semibold transition-all"
           style={{
             background: 'var(--color-surface-2)',
@@ -70,7 +70,7 @@ export default function NotFound() {
           Call us
         </a>
         <a
-          href="https://wa.me/966539720003"
+          href="https://wa.me/966573067785"
           className="rounded-lg px-6 py-3 font-semibold transition-all"
           style={{
             background: 'var(--color-wa)',

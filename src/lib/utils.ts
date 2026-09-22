@@ -14,7 +14,7 @@ export function buildWAUrl(waNumber: string, fields: Record<string, string | und
   return `https://wa.me/${waNumber}?text=${encodeURIComponent(lines)}`
 }
 
-/** Format a raw E.164 phone number for display: +966539720003 → +966 53 972 0003 */
+/** Format a raw E.164 phone number for display: +966573067785 → +966 57 306 7785 */
 export function formatPhone(raw: string): string {
   return raw.replace(/(\+966)(\d{2})(\d{3})(\d{4})$/, '$1 $2 $3 $4')
 }

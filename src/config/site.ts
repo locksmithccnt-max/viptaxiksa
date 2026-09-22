@@ -12,11 +12,11 @@ export const site = {
   tagline: 'Private taxi transfers between Makkah, Madinah and Jeddah',
 
   // ── Contact ───────────────────────────────────────────────────────────────
-  phone: '+966539720003',
-  phonePretty: '+966 53 972 0003',
-  phoneHref: 'tel:+966539720003',
-  whatsapp: 'https://wa.me/966539720003',
-  whatsappNumber: '966539720003',
+  phone: '+966573067785',
+  phonePretty: '+966 57 306 7785',
+  phoneHref: 'tel:+966573067785',
+  whatsapp: 'https://wa.me/966573067785',
+  whatsappNumber: '966573067785',
 
   // ── Address ───────────────────────────────────────────────────────────────
   // Owner confirmation needed: is this a service-area business (no storefront)?
