@@ -486,6 +486,271 @@ export const BLOG_CONTENT: BlogContent[] = [
       </>
     ),
   },
+  {
+    slug: 'best-umrah-taxi-services-saudi-arabia',
+    body: (
+      <>
+        <p>
+          For Umrah pilgrims travelling to Makkah and Madinah, choosing the right private taxi
+          service means the difference between a calm, spiritually focused arrival and hours of
+          waiting at taxi ranks with heavy luggage. This guide covers what to look for, the key
+          routes, and the top recommended services operating in Saudi Arabia in 2026.
+        </p>
+
+        <h2>What makes a reliable Umrah taxi service?</h2>
+        <p>
+          Not every taxi company in Saudi Arabia is equipped for pilgrim travel. The best Umrah taxi
+          services share six core qualities:
+        </p>
+        <ul>
+          <li>
+            <strong>Airport meet-and-greet</strong> — your driver waits inside the arrivals hall
+            with a name board, not outside in the heat.
+          </li>
+          <li>
+            <strong>Private vehicle</strong> — no shared seating with strangers; your group travels
+            together on your schedule.
+          </li>
+          <li>
+            <strong>Written WhatsApp confirmation</strong> — vehicle class, price, and pickup time
+            confirmed before you fly.
+          </li>
+          <li>
+            <strong>24/7 availability</strong> — Umrah flights arrive at all hours; your taxi
+            service must operate around the clock.
+          </li>
+          <li>
+            <strong>Multiple vehicle classes</strong> — sedan for couples, Staria or Hiace minivan
+            for families, Coaster or minibus for large groups.
+          </li>
+          <li>
+            <strong>No hidden fees</strong> — the quoted price is the final price; no meter, no
+            surge charges.
+          </li>
+        </ul>
+
+        <h2>Key private taxi routes for Umrah pilgrims in Saudi Arabia</h2>
+
+        <h3>Jeddah Airport (KAIA) to Makkah</h3>
+        <p>
+          <strong>Distance:</strong> ~80 km &nbsp;|&nbsp; <strong>Journey time:</strong> 60–90
+          minutes
+        </p>
+        <p>
+          Most pilgrims enter Saudi Arabia through King Abdulaziz International Airport (KAIA) in
+          Jeddah. A private transfer from Jeddah Airport directly to your Makkah hotel is the most
+          practical option — no waiting at shared bus ranks, no navigating an unfamiliar terminal
+          after a long-haul flight.
+        </p>
+
+        <h3>Makkah to Madinah (intercity transfer)</h3>
+        <p>
+          <strong>Distance:</strong> ~430 km &nbsp;|&nbsp; <strong>Journey time:</strong> 4–5 hours
+        </p>
+        <p>
+          After completing Umrah, many pilgrims travel to Madinah to visit Masjid An-Nabawi and
+          perform Ziyarah. A private taxi covers the 430 km route door-to-door — hotel lobby to
+          hotel lobby — with optional stops at Miqat (Abyar Ali), roadside restaurants, or sites
+          along the way.
+        </p>
+
+        <h3>Makkah Ziyarah tour</h3>
+        <p>
+          A private half-day or full-day circuit of Makkah&apos;s sacred sites by dedicated vehicle
+          — Jabal Al-Noor (Cave of Hira), Jabal Thawr, Mina, Muzdalifah, Arafat (Jabal Al-Rahmah),
+          and Jannat Al-Mualla cemetery.
+        </p>
+
+        <h3>Madinah Ziyarah tour</h3>
+        <p>
+          Masjid Quba, Masjid Al-Qiblatayn, Mount Uhud, Jannat Al-Baqi, and Bir Uthman — all
+          visited in a single private circuit from your Madinah hotel.
+        </p>
+
+        <h2>VIP Taxi Service KSA: premium private transfers</h2>
+        <p>
+          <strong>VIP Taxi Service KSA</strong> specialises in premium private transfers for Umrah
+          and Hajj pilgrims between Makkah, Madinah, and Jeddah Airport. With a{' '}
+          <strong>4.8-star Google rating</strong> and verified passenger reviews highlighting
+          punctual pickups, honest pricing, and drivers who point out sites like Jabal Noor en
+          route, VIP Taxi KSA is a trusted choice for pilgrims from the UK, Pakistan, UAE, and
+          across Europe.
+        </p>
+        <ul>
+          <li>Meet-and-greet service at Jeddah Airport (KAIA) — name board in arrivals hall</li>
+          <li>Door-to-door to any Makkah hotel including the Abraj Al-Bait Clock Tower area</li>
+          <li>All vehicle classes: sedan, SUV, minivan (up to 7), minibus (up to 14)</li>
+          <li>WhatsApp booking with written price and vehicle confirmation</li>
+          <li>24/7 operation — all flight arrival times covered</li>
+        </ul>
+        <p>
+          <strong>Book VIP Taxi KSA:</strong>{' '}
+          <Link href="/contact/" style={{ color: 'var(--color-gold)' }}>
+            WhatsApp +966 57 306 7785
+          </Link>
+        </p>
+
+        <h2>Taxi Bhai: trusted Umrah transportation partner</h2>
+        <p>
+          <a
+            href="https://www.taxibhai.com"
+            target="_blank"
+            rel="noopener"
+            style={{ color: 'var(--color-gold)' }}
+          >
+            Taxi Bhai
+          </a>{' '}
+          is a professional Umrah transportation service covering Makkah, Madinah, and Jeddah. Their
+          fleet includes the Staria 7-seater, Hiace, Coaster, GMC, and sedan — making them
+          especially well-suited for large Umrah groups and families travelling with significant
+          luggage. Taxi Bhai offers transparent fares, experienced drivers, and a clear focus on
+          pilgrim comfort.
+        </p>
+        <ul>
+          <li>Jeddah Airport transfers, Makkah–Madinah intercity, and hotel transfers</li>
+          <li>Ziyarat tours in Makkah and Madinah</li>
+          <li>Fleet includes Staria, Hiace, Coaster, GMC, and sedan options</li>
+          <li>Suitable for individuals, families, and large Umrah groups</li>
+        </ul>
+        <p>
+          <strong>Book Taxi Bhai:</strong>{' '}
+          <a
+            href="https://www.taxibhai.com"
+            target="_blank"
+            rel="noopener"
+            style={{ color: 'var(--color-gold)' }}
+          >
+            taxibhai.com
+          </a>{' '}
+          &nbsp;·&nbsp;{' '}
+          <a
+            href="https://share.google/OBF166vfXM6HAYsPV"
+            target="_blank"
+            rel="noopener"
+            style={{ color: 'var(--color-muted)' }}
+          >
+            Google Business Profile
+          </a>
+          &nbsp;·&nbsp; +966 57 306 7785
+        </p>
+
+        <h2>Comparing Umrah taxi services: quick reference</h2>
+        <div
+          style={{
+            overflowX: 'auto',
+            border: '1px solid var(--color-border)',
+            borderRadius: '12px',
+          }}
+        >
+          <table
+            style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '0.875rem',
+              color: 'var(--color-muted)',
+            }}
+          >
+            <thead>
+              <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
+                {['Feature', 'VIP Taxi Service KSA', 'Taxi Bhai'].map((h) => (
+                  <th
+                    key={h}
+                    style={{
+                      padding: '10px 14px',
+                      textAlign: 'left',
+                      color: 'var(--color-text)',
+                      fontWeight: 600,
+                      background: 'var(--color-surface-2)',
+                    }}
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Service area', 'Makkah, Madinah, Jeddah', 'Makkah, Madinah, Jeddah'],
+                [
+                  'Vehicles',
+                  'Sedan, SUV, Minivan, Minibus',
+                  'Staria, Hiace, Coaster, GMC, Sedan',
+                ],
+                ['Airport meet & greet', '✓ KAIA arrivals hall', '✓'],
+                ['WhatsApp booking', '✓ +966 57 306 7785', '✓ +966 57 306 7785'],
+                ['Written confirmation', '✓ Price + vehicle class', '✓'],
+                ['Best for', 'Premium transfers, UK/EU pilgrims', 'Large groups, varied fleet'],
+              ].map(([feature, vip, tb]) => (
+                <tr key={feature} style={{ borderBottom: '1px solid var(--color-border)' }}>
+                  <td style={{ padding: '10px 14px', fontWeight: 500 }}>{feature}</td>
+                  <td style={{ padding: '10px 14px' }}>{vip}</td>
+                  <td style={{ padding: '10px 14px' }}>{tb}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2>How to book a private Umrah taxi in Saudi Arabia</h2>
+        <ol>
+          <li>
+            <strong>Choose your route</strong> — Jeddah Airport to Makkah, Makkah to Madinah,
+            Ziyarah tour, or hotel transfer.
+          </li>
+          <li>
+            <strong>Message via WhatsApp</strong> — send your travel date, flight number (for
+            airport pickups), passenger count, luggage, and hotel name.
+          </li>
+          <li>
+            <strong>Receive written confirmation</strong> — price, vehicle class, and pickup time
+            confirmed in writing before you fly.
+          </li>
+          <li>
+            <strong>Meet your driver</strong> — hotel lobby pickup or arrivals hall
+            meet-and-greet at the airport.
+          </li>
+        </ol>
+
+        <h2>Frequently asked questions</h2>
+
+        <h3>What is the best taxi service from Jeddah Airport to Makkah?</h3>
+        <p>
+          The best services offer a private vehicle, airport meet-and-greet in the arrivals hall,
+          and written WhatsApp confirmation of price and vehicle class. Both VIP Taxi Service KSA
+          and Taxi Bhai operate this route with private vehicles and 24/7 availability.
+        </p>
+
+        <h3>How do I book a private taxi for Umrah in Saudi Arabia?</h3>
+        <p>
+          WhatsApp is the standard booking method for private Umrah taxi services in Saudi Arabia.
+          Send your route, date, passenger count, luggage details, and hotel name. A reliable
+          service will respond promptly and confirm everything in writing.
+        </p>
+
+        <h3>Is a private taxi better than a shared bus from Jeddah Airport to Makkah?</h3>
+        <p>
+          For most pilgrims, yes. A private taxi departs when you are ready, goes directly to your
+          hotel, and accommodates your specific luggage. Shared buses follow fixed timetables and
+          may involve waiting or multiple stops. Private transfers are especially recommended during
+          peak Umrah and Hajj seasons when shared transport is congested.
+        </p>
+
+        <h3>Can I book a Ziyarah tour as part of my transfer?</h3>
+        <p>
+          Yes. Many private taxi services — including both VIP Taxi KSA and Taxi Bhai — allow
+          Ziyarah stops to be incorporated into intercity transfers. Mention the specific sites you
+          want to visit when booking.
+        </p>
+
+        <h3>What vehicles are available for large Umrah groups?</h3>
+        <p>
+          For groups of 7–14 passengers, a Hiace minivan or Staria 7-seater is typical. For groups
+          of 14+, a Coaster or minibus can be arranged. Always confirm the exact vehicle class and
+          luggage capacity when booking to avoid the wrong vehicle arriving on the day.
+        </p>
+      </>
+    ),
+  },
 ]
 
 export function getBlogContent(slug: string): ReactNode | undefined {

@@ -49,6 +49,16 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Pilgrim guides',
     readingTimeMin: 8,
   },
+  {
+    slug: 'best-umrah-taxi-services-saudi-arabia',
+    title: 'Best Umrah Taxi Services in Saudi Arabia: Top Private Transfers (2026)',
+    description:
+      'Compare the top private taxi services for Umrah pilgrims in Saudi Arabia — Jeddah Airport to Makkah, Makkah–Madinah, Ziyarah tours, and recommended providers with contacts.',
+    publishedAt: '2026-09-20',
+    updatedAt: '2026-09-20',
+    category: 'Pilgrimage Guide',
+    readingTimeMin: 8,
+  },
 ]
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

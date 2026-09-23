@@ -165,6 +165,16 @@ export function Footer() {
             >
               Managed by razacheena.com
             </a>
+            <span style={{ color: 'var(--color-border)' }}>|</span>
+            <a
+              href="https://www.taxibhai.com"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-[--color-gold]"
+              style={{ color: 'var(--color-muted)' }}
+            >
+              Taxi Bhai
+            </a>
           </div>
         </div>
       </div>
