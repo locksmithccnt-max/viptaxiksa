@@ -29,22 +29,24 @@ const homeJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'TaxiService',
+      '@type': ['TaxiService', 'LocalBusiness'],
       '@id': `${site.url}/#business`,
       name: site.name,
       url: site.url,
       telephone: site.phone,
+      image: `${site.url}/og/`,
       description:
         'Private taxi and limousine transfers between Makkah, Madinah and Jeddah. Specialising in Umrah and Hajj airport transfers, intercity routes, and Ziyarah tours.',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Makkah',
+        addressCountry: 'SA',
+      },
       areaServed: [
         { '@type': 'City', name: 'Makkah' },
         { '@type': 'City', name: 'Madinah' },
         { '@type': 'City', name: 'Jeddah' },
       ],
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'SA',
-      },
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: site.rating.value,
@@ -52,7 +54,15 @@ const homeJsonLd = {
         bestRating: 5,
         worstRating: 1,
       },
-      priceRange: 'Contact for quote',
+      priceRange: 'SAR',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      description: site.tagline,
+      publisher: { '@id': `${site.url}/#business` },
     },
   ],
 }

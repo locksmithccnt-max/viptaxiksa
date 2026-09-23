@@ -25,9 +25,15 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'TaxiService',
+      '@type': ['TaxiService', 'LocalBusiness'],
       '@id': `${site.url}/#business`,
       name: site.name,
+      image: `${site.url}/og/`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Makkah',
+        addressCountry: 'SA',
+      },
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: site.rating.value,

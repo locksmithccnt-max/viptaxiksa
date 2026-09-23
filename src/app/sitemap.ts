@@ -4,7 +4,7 @@ import { ROUTES } from '@/data/routes'
 import { BLOG_POSTS } from '@/data/blog'
 
 const staticPages: MetadataRoute.Sitemap = [
-  { url: `${site.url}/`, lastModified: '2026-09-18', changeFrequency: 'weekly', priority: 1.0 },
+  { url: `${site.url}/`, lastModified: '2026-09-23', changeFrequency: 'weekly', priority: 1.0 },
   {
     url: `${site.url}/services/`,
     lastModified: '2026-09-18',
@@ -43,7 +43,7 @@ const staticPages: MetadataRoute.Sitemap = [
   },
   {
     url: `${site.url}/blog/`,
-    lastModified: '2026-09-18',
+    lastModified: '2026-09-23',
     changeFrequency: 'weekly',
     priority: 0.8,
   },

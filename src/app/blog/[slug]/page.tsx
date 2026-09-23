@@ -46,23 +46,48 @@ function buildJsonLd(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
   const url = `${site.url}/blog/${post.slug}/`
   return {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    '@id': url,
-    headline: post.title,
-    description: post.description,
-    url,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
-    author: {
-      '@type': 'Organization',
-      name: site.name,
-      url: site.url,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: site.name,
-      url: site.url,
-    },
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': url,
+        headline: post.title,
+        description: post.description,
+        url,
+        image: {
+          '@type': 'ImageObject',
+          url: `${site.url}/og/?title=${encodeURIComponent(post.title)}`,
+          width: 1200,
+          height: 630,
+        },
+        datePublished: post.publishedAt,
+        dateModified: post.updatedAt,
+        author: {
+          '@type': 'Organization',
+          '@id': `${site.url}/#business`,
+          name: site.name,
+          url: site.url,
+        },
+        publisher: {
+          '@type': 'Organization',
+          '@id': `${site.url}/#business`,
+          name: site.name,
+          url: site.url,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${site.url}/favicon.svg`,
+          },
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${site.url}/blog/` },
+          { '@type': 'ListItem', position: 3, name: post.title, item: url },
+        ],
+      },
+    ],
   }
 }
 

@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       'Private taxi and limousine transfers between Makkah, Madinah and Jeddah. Hotel-to-hotel for pilgrims, families, tourists. 4.8★ on Google.',
     images: [
       {
-        url: '/og-default.png',
+        url: '/og/',
         width: 1200,
         height: 630,
         alt: 'VIP Taxi Service KSA — Private Transfers',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VIP Taxi Service KSA — Private Transfers',
     description: 'Hotel-to-hotel taxi transfers between Makkah, Madinah and Jeddah.',
-    images: ['/og-default.png'],
+    images: ['/og/'],
   },
   alternates: {
     canonical: site.url + '/',
@@ -80,11 +80,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.webmanifest',
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '32x32' },
-    ],
-    apple: '/apple-touch-icon.png',
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
 }
 
